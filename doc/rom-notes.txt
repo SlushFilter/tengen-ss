@@ -1,0 +1,16 @@
+(8) 8k PRG Rom Banks
+(8) 8k CHR Rom Banks
+MMC3 - Mapper 4, Vertical Mirror
+
+Boots with PRG $8000:BFFF mapped to PRG Banks 4 and 5
+
+Bank Mapping
+
+0	Unused ?
+1	Unused ?
+2	Unused ?
+3	$8000	Sound Engine
+4	$8000	Game Data
+5	$A000	Game Data
+6	$C000	Fixed
+7	$E000	Fixed

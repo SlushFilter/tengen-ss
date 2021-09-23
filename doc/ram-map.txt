@@ -1,0 +1,34 @@
+### Zero Page ###
+
+01								Used as a pointer.
+02                              Used as a pointer.
+
+05								General use byte.
+06                              General use byte.
+	
+13								CHR Table Index to be loaded into VRAM $0000
+14			ScreenIndex			Index of Screen Data : Init to #$09
+
+2A								Init to #$80
+
+2E								Init to #$00
+2F                              Init to #$00
+
+31			NametableTarget		Init to #$00	: 
+
+300:307							305 is init to #$F5
+30A:311							30F is init to #$F5
+317
+318
+319
+31A								Init to $DC
+31B								Init to $B8
+
+323								Init to #$40
+
+33F								Shadow_A
+340								Shadow_X
+341								Shadow_Y
+
+0500:05FF						Audio Registers
+
