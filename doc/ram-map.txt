@@ -14,6 +14,7 @@
 2E								Init to #$00
 2F                              Init to #$00
 
+30								Init to #$1E
 31			NametableTarget		Init to #$00	: 
 
 300:307							305 is init to #$F5

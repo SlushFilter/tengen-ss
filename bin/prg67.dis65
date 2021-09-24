@@ -38,7 +38,7 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
-"ChrTable_0000":{
+"ChrIndex":{
 "DataDescriptor":{
 "Length":1,
 "Format":"NumericLE",
@@ -49,7 +49,7 @@
 "HasWidth":false,
 "Direction":"ReadWrite",
 "MultiMask":null,
-"Label":"ChrTable_0000",
+"Label":"ChrIndex",
 "Value":19,
 "Source":"Project",
 "Type":"ExternalAddr",
@@ -136,6 +136,23 @@
 "MultiMask":null,
 "Label":"Shadow_Y",
 "Value":833,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_00":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_00",
+"Value":0,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -255,6 +272,23 @@
 "MultiMask":null,
 "Label":"Var_2F",
 "Value":47,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_30":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_30",
+"Value":48,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -416,12 +450,23 @@
 },
 
 "Comments":{
-"3399":" A = 9, X = 0",
+"3385":" Var_2A = #$80",
+"3389":" Var_323 = #$40",
+"3395":" ScreenIndex = 9",
+"3397":" NameTable = 0",
+"3399":" LoadScreen 9 into Nametable 0",
+"3404":" LoRom Call to Bank3:8003",
+"3409":" Var_30 = #$0E",
+"3413":" Var_00 = #$02",
 "3481":" Reset Stack Pointer",
 "3807":" Zero out $300:307",
 "3810":" Zero out $30A:311",
 "3818":" Set $305 = #$F5",
 "3821":" Set $30F = #$F5",
+"3825":" NametableTarget = X",
+"3827":" ScreenIndex = A",
+"3829":" Clear targeted nametable.",
+"3847":" Tail Return",
 "6738":" X = Nametable Seleciton",
 "6740":" Enable NMI",
 "6745":" Wait for a VBlank",
@@ -626,6 +671,24 @@
 "Text":"NameTable/Attrib/Palette Pointers : LoRom Banks 4 and 5",
 "BoxMode":true,
 "MaxWidth":80,
+"BackgroundColor":0},
+
+"6786":{
+"Text":"F_LoadNametable\r\n\r\nSwaps in the appropriate CHR pages, then loads up the specified Nametable data \r\ninto the targeted PPU Nametable memory location.\r\n\r\n#Arguments\r\n\r\n($13) ChrIndex        : CHR Page set index to load into the pattern tables.\r\n($14) ScreenIndex     : Index of screen data to load into the nametable.\r\n($31) NametableTarget : The target nametable (0:3) to load data into.",
+"BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"8063":{
+"Text":"F_SyncEnableNMI\r\n\r\nWait for the next VBlank to complete, then enable NMI\u0027s",
+"BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"3825":{
+"Text":"F_LoadScreen\r\n\r\nLoads the specified screen and updates relevant support variables.\r\n\r\n#Arguments\r\n\r\nA : The ScreenIndex to load\r\nX : The Nametable to target (0:3)",
+"BoxMode":true,
+"MaxWidth":80,
 "BackgroundColor":0}},
 
 "Notes":{
@@ -780,7 +843,7 @@
 "LabelAnno":"None"},
 
 "3825":{
-"Label":"F_CEF1_1",
+"Label":"F_LoadScreen",
 "Value":52977,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -1141,6 +1204,41 @@
 "Value":52057,
 "Source":"User",
 "Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"6786":{
+"Label":"F_LoadNametable",
+"Value":55938,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"8068":{
+"Label":"waitVblankEnd",
+"Value":57220,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"8063":{
+"Label":"F_SyncEnableNMI",
+"Value":57215,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"7040":{
+"Label":"F_DB80",
+"Value":56192,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3481":{
+"Label":"resetStack",
+"Value":52633,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
