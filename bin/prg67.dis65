@@ -427,6 +427,74 @@
 "Value":803,
 "Source":"Project",
 "Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_62":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_62",
+"Value":98,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_63":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_63",
+"Value":99,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_A1":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_A1",
+"Value":161,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_A2":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_A2",
+"Value":162,
+"Source":"Project",
+"Type":"ExternalAddr",
 "LabelAnno":"None"}}},
 
 "AddressMap":[{
@@ -501,6 +569,7 @@
 "6925":" Fetch the data byte",
 "6927":" Write the byte to PPUDATA",
 "6930":" Increment the data pointer",
+"7523":" Load SpriteIndex and Tile Index",
 "8573":" $8000",
 "8574":" $892d",
 "8575":" $9249",
@@ -688,6 +757,42 @@
 "3825":{
 "Text":"F_LoadScreen\r\n\r\nLoads the specified screen and updates relevant support variables.\r\n\r\n#Arguments\r\n\r\nA : The ScreenIndex to load\r\nX : The Nametable to target (0:3)",
 "BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7530":{
+"Text":" -- Write Tile Index --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7568":{
+"Text":"-- Write X Position --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7551":{
+"Text":"-- Write Y Position --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7585":{
+"Text":"-- Car 1 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7647":{
+"Text":"-- Car 2 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7709":{
+"Text":"-- Car 3 --",
+"BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0}},
 
@@ -1239,6 +1344,20 @@
 "Value":52633,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7523":{
+"Label":"F_DrawTrackSprites",
+"Value":56675,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"7434":{
+"Label":"F_WriteTrackSpriteAttribs",
+"Value":56586,
+"Source":"User",
+"Type":"GlobalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
