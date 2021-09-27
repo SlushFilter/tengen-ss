@@ -225,6 +225,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_0B":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_0B",
+"Value":11,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_1D":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_1D",
+"Value":29,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_2A":{
 "DataDescriptor":{
 "Length":1,
@@ -429,6 +463,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_32D":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_32D",
+"Value":813,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_62":{
 "DataDescriptor":{
 "Length":1,
@@ -495,6 +546,40 @@
 "Value":162,
 "Source":"Project",
 "Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_D0":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_D0",
+"Value":208,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_D1":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_D1",
+"Value":209,
+"Source":"Project",
+"Type":"ExternalAddr",
 "LabelAnno":"None"}}},
 
 "AddressMap":[{
@@ -526,7 +611,18 @@
 "3404":" LoRom Call to Bank3:8003",
 "3409":" Var_30 = #$0E",
 "3413":" Var_00 = #$02",
+"3459":" Not sure what\u0027s going on here.",
+"3461":" Seems to loop the program until one of ..",
+"3463":" .. two things happen.",
+"3471":" Check for Flag #$08 on D0 or D1",
+"3475":" Check for $00 to count down to 0",
 "3481":" Reset Stack Pointer",
+"3774":" Return A = 0 if $0B != #$3C",
+"3776":" Otherwise Set $0B = #$00 ..",
+"3778":" .. and decrement #$00 ..",
+"3782":" .. then return A = 1",
+"3786":" Return 0",
+"3789":" Return 1",
 "3807":" Zero out $300:307",
 "3810":" Zero out $30A:311",
 "3818":" Set $305 = #$F5",
@@ -1358,6 +1454,41 @@
 "Value":56586,
 "Source":"User",
 "Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3450":{
+"Label":"F_CD7A",
+"Value":52602,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3784":{
+"Label":"return_0",
+"Value":52936,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"3787":{
+"Label":"return_1",
+"Value":52939,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"3770":{
+"Label":"F_CEBA",
+"Value":52922,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3459":{
+"Label":"loopD0",
+"Value":52611,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
