@@ -786,6 +786,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_57":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_57",
+"Value":87,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_62":{
 "DataDescriptor":{
 "Length":1,
@@ -837,6 +854,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_74":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_74",
+"Value":116,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_7C":{
 "DataDescriptor":{
 "Length":1,
@@ -884,6 +918,23 @@
 "MultiMask":null,
 "Label":"Var_92",
 "Value":146,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_9D":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_9D",
+"Value":157,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1171,6 +1222,14 @@
 "3827":" ScreenIndex = A",
 "3829":" Clear targeted nametable.",
 "3847":" Tail Return",
+"4491":" X = 3",
+"4495":" Y = X - 1",
+"4499":" A = $57[X] - $57[Y]",
+"4504":" Branch if A \u003c 6",
+"4508":" Branch if A \u003c -6",
+"4513":" A = $4C[X] = $4C[Y]",
+"4518":" Branch if A \u003c 6",
+"4522":" Branch if A \u003c -6",
 "6738":" X = Nametable Seleciton",
 "6740":" Enable NMI",
 "6745":" Wait for a VBlank",
@@ -1519,7 +1578,11 @@
 "BackgroundColor":0}},
 
 "Notes":{
-},
+"3970":{
+"Text":"Physics ?",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":-256}},
 
 "UserLabels":{
 "8079":{
@@ -2491,6 +2554,62 @@
 "10386":{
 "Label":"bitsClear",
 "Value":59538,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4493":{
+"Label":"procLoop",
+"Value":53645,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4491":{
+"Label":"F_D18B",
+"Value":53643,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4510":{
+"Label":"abs57_lt6",
+"Value":53662,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4524":{
+"Label":"abs4c_lt6",
+"Value":53676,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4496":{
+"Label":"innerLoop",
+"Value":53648,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4527":{
+"Label":"abs_gtFA",
+"Value":53679,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4596":{
+"Label":"F_D1F4",
+"Value":53748,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4624":{
+"Label":"return",
+"Value":53776,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
