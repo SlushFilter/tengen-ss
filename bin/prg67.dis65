@@ -514,6 +514,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_1C":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_1C",
+"Value":28,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_1D":{
 "DataDescriptor":{
 "Length":1,
@@ -752,6 +769,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_4C":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_4C",
+"Value":76,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_62":{
 "DataDescriptor":{
 "Length":1,
@@ -799,6 +833,23 @@
 "MultiMask":null,
 "Label":"Var_66",
 "Value":102,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_7C":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_7C",
+"Value":124,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1213,6 +1264,10 @@
 "8662":" $A7E3",
 "8663":" $B12E",
 "8664":" $B9EB",
+"10354":" $91[X] = $91[X] \u0026 %11100111",
+"10358":" Branch if any bits are set of %01100010",
+"13411":" A = $4C[X] \u0026 %00000111",
+"13415":" If A \u003c #$04 then Var_1C = #$10",
 "13712":" Set (word)Var_01 = Attribute Data Pointer Y",
 "13727":" Set PPUADDR to AttribTable X",
 "13738":" Copy #$40 bytes to Attribute Table X",
@@ -1447,6 +1502,18 @@
 
 "6963":{
 "Text":"--",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10360":{
+"Text":"-- Bits Set --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10386":{
+"Text":"-- Bits Clear --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0}},
@@ -2128,11 +2195,11 @@
 "LabelAnno":"Generated"},
 
 "13409":{
-"Label":"TF461",
+"Label":"F_F461",
 "Value":62561,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "13394":{
 "Label":"TF452",
@@ -2410,6 +2477,20 @@
 "7003":{
 "Label":"bit6",
 "Value":56155,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"13421":{
+"Label":"skip",
+"Value":62573,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10386":{
+"Label":"bitsClear",
+"Value":59538,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
@@ -4299,6 +4380,18 @@
 "Label":"PALETTE_CD27",
 "Part":"High"}},
 
+"10352":{
+"Length":2,
+"Format":"NumericLE",
+"SubFormat":"Binary",
+"SymbolRef":null},
+
+"10356":{
+"Length":2,
+"Format":"NumericLE",
+"SubFormat":"Binary",
+"SymbolRef":null},
+
 "12735":{
 "Length":1,
 "Format":"NumericLE",
@@ -4752,7 +4845,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF461",
+"Label":"F_F461",
 "Part":"Low"}},
 
 "13600":{

@@ -14,6 +14,7 @@
 14			ScreenIndex			Index of Screen Data : Init to #$09
 
 1B								Joypad input buffer ?
+1C								General use ?
 
 2A								Init to #$80 Flags : AB.. ....
 
@@ -23,7 +24,11 @@
 30								Init to #$1E
 31			NametableTarget		Init to #$00	: 
 
+4C								Array of some sort
+
 66								Init to #$B3
+
+7C								Array of some sort
 
 91								Flags : .... ...A
 									A : ???
