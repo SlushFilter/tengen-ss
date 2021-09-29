@@ -10,7 +10,7 @@
 "EntryFlags":32702671,
 "AutoLabelStyle":"Simple",
 "AnalysisParams":{
-"AnalyzeUncategorizedData":false,
+"AnalyzeUncategorizedData":true,
 "DefaultTextScanMode":"LowHighAscii",
 "MinCharsForString":4,
 "SeekNearbyTargets":true,
@@ -956,6 +956,125 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"OamSpr15_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr15_Tile",
+"Value":597,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr15_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr15_X",
+"Value":599,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr15_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr15_Y",
+"Value":596,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr16_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr16_Tile",
+"Value":601,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr16_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr16_X",
+"Value":603,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr16_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr16_Y",
+"Value":600,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr17_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr17_Attr",
+"Value":606,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "OamSpr17_Tile":{
 "DataDescriptor":{
 "Length":1,
@@ -1003,6 +1122,23 @@
 "MultiMask":null,
 "Label":"OamSpr17_Y",
 "Value":604,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr18_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr18_Attr",
+"Value":610,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1058,6 +1194,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"OamSpr19_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr19_Attr",
+"Value":614,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "OamSpr19_Tile":{
 "DataDescriptor":{
 "Length":1,
@@ -1105,6 +1258,57 @@
 "MultiMask":null,
 "Label":"OamSpr19_Y",
 "Value":612,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1A_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1A_Tile",
+"Value":617,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1A_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1A_X",
+"Value":619,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1A_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1A_Y",
+"Value":616,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1177,7 +1381,7 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
-"ObstacleTile":{
+"OamSpr1C_Tile":{
 "DataDescriptor":{
 "Length":1,
 "Format":"NumericLE",
@@ -1188,8 +1392,297 @@
 "HasWidth":false,
 "Direction":"ReadWrite",
 "MultiMask":null,
-"Label":"ObstacleTile",
-"Value":43,
+"Label":"OamSpr1C_Tile",
+"Value":625,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1C_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1C_X",
+"Value":627,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1C_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1C_Y",
+"Value":624,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1D_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1D_Tile",
+"Value":629,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1D_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1D_X",
+"Value":635,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1D_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1D_Y",
+"Value":628,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1E_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1E_Tile",
+"Value":633,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1E_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1E_X",
+"Value":631,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1E_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1E_Y",
+"Value":632,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1F_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1F_Tile",
+"Value":637,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1F_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1F_X",
+"Value":639,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OamSpr1F_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OamSpr1F_Y",
+"Value":636,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OapSpr1C_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OapSpr1C_Attr",
+"Value":626,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OapSpr1D_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OapSpr1D_Attr",
+"Value":634,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OapSpr1E_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OapSpr1E_Attr",
+"Value":630,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"OapSpr1F_Attr":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"OapSpr1F_Attr",
+"Value":638,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"PpuAddr_Hi":{
+"DataDescriptor":{
+"Length":3,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"PpuAddr_Hi",
+"Value":823,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"PpuAddr_Lo":{
+"DataDescriptor":{
+"Length":3,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"PpuAddr_Lo",
+"Value":820,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1564,6 +2057,91 @@
 "MultiMask":null,
 "Label":"Spr19_Y",
 "Value":64,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Spr1A_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr1A_X",
+"Value":55,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Spr1A_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr1A_Y",
+"Value":54,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Spr1B_Tile":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr1B_Tile",
+"Value":43,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Spr1B_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr1B_X",
+"Value":57,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Spr1B_Y":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr1B_Y",
+"Value":56,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2027,6 +2605,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_330":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_330",
+"Value":816,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_331":{
+"DataDescriptor":{
+"Length":3,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_331",
+"Value":817,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_35E":{
 "DataDescriptor":{
 "Length":1,
@@ -2040,40 +2652,6 @@
 "MultiMask":null,
 "Label":"Var_35E",
 "Value":862,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
-"Var_38":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_38",
-"Value":56,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
-"Var_39":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_39",
-"Value":57,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2614,12 +3192,43 @@
 "4513":" A = $4C[X] = $4C[Y]",
 "4518":" Branch if A \u003c 6",
 "4522":" Branch if A \u003c -6",
+"4874":" Return if $319 \u003c #$0E",
+"4892":" Set PPUADDR to the value read in.",
+"4912":" Write #$04 to PPUDATA",
+"4926":" Randomize $330",
+"4935":" $8927",
+"4936":" $9243",
+"4937":" $9BD5",
+"4938":" $A531",
+"4939":" $AE75",
+"4940":" $B7C0",
+"5385":" $8913",
+"5386":" $922F",
+"5387":" $9BC1",
+"5388":" $A51D",
+"5389":" $AE61",
+"5390":" $B7AC",
+"5399":" $88F9",
+"5400":" $9215",
+"5401":" $9BA7",
+"5402":" $A503",
+"5403":" $AE47",
+"5404":" $B792",
 "5418":" if $319 \u003c 3 then return",
 "5427":" Set Puddle Sprite",
 "5431":" Set Water Palette",
 "5439":" Set Oil Sprite",
 "5443":" Set Oil Palette",
 "5447":" Set Mud Sprite",
+"5453":" Update sprite attribute",
+"5463":" Fetch position list pointer.",
+"5466":" (word)$01 = D_PositionListPtr[Y]",
+"5474":" Select a random position pair.",
+"5482":" Place the puddle on the track.",
+"5601":" If $319 \u003c 7 then Return",
+"5605":" Set tile #$C1 on all of these.",
+"5613":" Set attribs for #$00",
+"5636":" Copy 6 bytes from data array to Spr17:Spr18.Tile",
 "5724":" Y++",
 "5725":" $1C = Y",
 "5733":" Branch if any of $27, $28 and $29 are non-zero",
@@ -2670,8 +3279,11 @@
 "6930":" Increment the data pointer",
 "6942":" Write #$00 Y times to PPUData",
 "6953":" $07 = #$00",
+"6965":" $07.bit5 = 1",
 "6977":" PPUADDR = $2040 (Nametable 0, Row 2)",
 "6982":" Clear 14 bytes at (0, 2)",
+"6995":" PPUADDR $2053",
+"7000":" Clear 13 bytes at (14, 2)",
 "7048":" Strobe JOY1 to prep for state read",
 "7058":" X = #$09 (loop counter)",
 "7064":" ROR all bits into $1B ..",
@@ -2685,7 +3297,11 @@
 "7585":" Write Car 2 Sprites",
 "7647":" Write Car 3 Sprites",
 "7709":" Write Car 4 Sprites",
+"7834":" Check to see if we need to draw Sprite00",
 "7850":" Offset down by 8",
+"7867":" Offset right by 8",
+"7911":" Always draw as tile #$7B",
+"7971":" Sprite Y = #$17",
 "8573":" Track 1 : $8000 ",
 "8574":" Track 3 : $892d",
 "8575":" Track 5 : $9249",
@@ -2969,7 +3585,7 @@
 "BackgroundColor":0},
 
 "6963":{
-"Text":"--",
+"Text":"-- Clear Portions of HUD --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0},
@@ -3059,7 +3675,7 @@
 "BackgroundColor":0},
 
 "7841":{
-"Text":"-- Sprite 00 : 16x16 --",
+"Text":"-- Draw Sprite 00 : 16x16 --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0},
@@ -3089,7 +3705,37 @@
 "BackgroundColor":0},
 
 "7961":{
-"Text":"--",
+"Text":"-- Sprite 1C --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7831":{
+"Text":"-- Sprite 00 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7523":{
+"Text":"F_DrawTrackSprites\r\n\r\nUpdates all the car, obstacle and other sprites\u0027 values in the OAM Shadow RAM area ($200:2FF)",
+"BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"5458":{
+"Text":"-- Randomize Puddle Location --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7003":{
+"Text":"-- Write Sprite Tiles/Attribs 1C thru 1F --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4876":{
+"Text":"-- Fetch PPU Addresses List Pointer --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0}},
@@ -4279,14 +4925,14 @@
 "LabelAnno":"None"},
 
 "5385":{
-"Label":"D_D509",
+"Label":"D_PositionListPtr_Lo",
 "Value":54537,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"},
 
 "5392":{
-"Label":"D_D510",
+"Label":"D_PositionListPtr_Hi",
 "Value":54544,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -4297,6 +4943,118 @@
 "Value":57053,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7973":{
+"Label":"drawSprite1C",
+"Value":57125,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"105":{
+"Label":"TC069",
+"Value":49257,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"Generated"},
+
+"5413":{
+"Label":"F_RandomizePuddle",
+"Value":54565,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"5644":{
+"Label":"return",
+"Value":54796,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"5596":{
+"Label":"F_D5DC_FinishLine",
+"Value":54748,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"Uncertain"},
+
+"79":{
+"Label":"TC04F",
+"Value":49231,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"Generated"},
+
+"5399":{
+"Label":"D_GoalSpriteDataPtr_Lo",
+"Value":54551,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"5406":{
+"Label":"D_GoalSpriteDataPtr_Hi",
+"Value":54558,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"5636":{
+"Label":"copyLoop",
+"Value":54788,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6951":{
+"Label":"F_DrawSteeringWheel",
+"Value":56103,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"Uncertain"},
+
+"4931":{
+"Label":"cleanupReturn",
+"Value":54083,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"125":{
+"Label":"TC07D",
+"Value":49277,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"Generated"},
+
+"4892":{
+"Label":"loop",
+"Value":54044,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4935":{
+"Label":"D_PpuAddrListPtr_Lo",
+"Value":54087,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4942":{
+"Label":"D_PpuAddrListPtr_Hi",
+"Value":54094,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4867":{
+"Label":"F_D303",
+"Value":54019,
+"Source":"User",
+"Type":"GlobalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
@@ -5649,6 +6407,54 @@
 "Format":"Dense",
 "SubFormat":"None",
 "SymbolRef":null},
+
+"4941":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC07D",
+"Part":"Low"}},
+
+"4948":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC07D",
+"Part":"High"}},
+
+"5391":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC069",
+"Part":"Low"}},
+
+"5398":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC069",
+"Part":"High"}},
+
+"5405":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC04F",
+"Part":"Low"}},
+
+"5412":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"TC04F",
+"Part":"High"}},
 
 "8580":{
 "Length":1,

@@ -24,14 +24,21 @@
 29                              General use ?
 
 2A								Init to #$80 Flags : AB.. ....
-2B			Sprite1B_Tile		Sprite 1B Tile Id : $26D
+									A : ???
+									B : (0) Show Sprite 1C (1) Hide Sprite 1C
+									
+2B			Spr1B_Tile			Sprite 1B Tile : Sprite 1B ($26D)
+
 2E			Scroll_H			Horizontal Scroll Register
 2F          Scroll_V            Vertical Scroll Register
 
 30								Init to #$1E
 31			NametableTarget		Init to #$00	:
 
-38								Init to #$F0
+36			Spr1A_Y				Sprite 1A Y : Sprite 1A ($268)
+37			Spr1A_X				Sprite 1A X : Sprite 1A ($26B)
+38			Spr1B_Y				Sprite 1B Y : Sprite 1B ($26C)
+39			Spr1B_X             Sprite 1B X : Sprite 1B ($26F)
 
 3A								Init to #$F0
 3C								Init to #$F0
@@ -77,8 +84,8 @@
 
 91								Flags : .... ...A
 									A : ???
-92								Flags : .A.. ....
-
+92								Flags : AB.. ....
+									A : (0) Hide Sprite 1C (1) Show Sprite 1C
 A1			Car1_OamIdx			OAM Index offset from $214 for Car1
 A2			Car2_OamIdx			OAM Index offset from $214 for Car2
 A3			Car3_OamIdx			OAM Index offset from $214 for Car3
@@ -129,10 +136,9 @@ Super Sprint uses static sprites to draw everything
 24C			Spr_13
 250			Spr_14
 
-254			Spr_15
+254			Spr_15				
 258			Spr_16
 25C			Spr_17
-
 260			Spr_18
 264			Spr_19
 268			Spr_1A
@@ -148,16 +154,26 @@ Super Sprint uses static sprites to draw everything
 30A:311							30F is init to #$F5
 317
 318
-319
+319								If non-zero, Sprite 00 gets drawn.
 31A								Init to $DC
 31B								Init to $B8
 
 31D								Randomization ?
 
-323								Init to #$40
+323								Flags : AB.. ....  : Init to #$40 
+									A : (1) Do not draw Sprite 00
+									B : ??
+
+330								Randomized?
+									
 32D								Flags : AB.. ....
 									A : ???
 									B : ???
+									
+330			Var_330				Randomized value between 0:3
+331:333		Var_331				Array related to PpuAddr buffers
+334:336		PpuAddr_Lo			Ppu Address Buffers 
+337:339		PpuAddr_Hi			Ppu Address Buffers 
 
 33C			CurrentTrack		The current track the racers are on.
 
