@@ -6,7 +6,9 @@
 05								General use byte.
 06                              General use byte.
 07								General use byte.
-	
+
+09								General use ?
+
 0B			FrameCounter		Incremented by one every NMI
 
 12			JoypadStartOnly		Only read Start button inputs if non-zero
@@ -15,20 +17,63 @@
 
 1B								Joypad input buffer ?
 1C								General use ?
+1D								General use ?
+
+27								General use ?
+28                              General use ?
+29                              General use ?
 
 2A								Init to #$80 Flags : AB.. ....
-
-2E								Init to #$00
-2F                              Init to #$00
+2B			Sprite1B_Tile		Sprite 1B Tile Id : $26D
+2E			Scroll_H			Horizontal Scroll Register
+2F          Scroll_V            Vertical Scroll Register
 
 30								Init to #$1E
-31			NametableTarget		Init to #$00	: 
+31			NametableTarget		Init to #$00	:
 
-4C								Array of some sort
+38								Init to #$F0
 
-66								Init to #$B3
+3A								Init to #$F0
+3C								Init to #$F0
 
-7C								Array of some sort
+3E			Spr17_Y				Sprite 17 Y : Sprite 17 ($25C)
+3F			Spr18_Y				Sprite 18 Y : Sprite 18 ($260)
+40			Spr19_Y				Sprite 19 Y : Sprite 19 ($264)
+41			Spr17_X				Sprite 17 X : Sprite 17 ($25F)
+42			Spr18_X				Sprite 18 X : Sprite 18 ($263)
+43			Spr19_X				Sprite 19 X : Sprite 19 ($267)
+
+4C			Car1_Y				Car1 Y Position
+4D          Car2_Y				Car2 Y Position
+4E          Car3_Y				Car3 Y Position
+4F          Car4_Y				Car4 Y Position
+
+50			Spr00_Y				Sprite 00 Y ($200:$20F)
+51			Spr04_Y				Sprite 04 Y ($210)
+
+57			Car1_X				Car1 X Position
+58          Car2_X              Car2 X Position
+59          Car3_X              Car3 X Position
+5A          Car4_X              Car4 X Position
+5B			Spr00_X				Sprite 00 X ($200:$20F)
+
+5C			Spr04_X				Sprite 04 X ($213)
+
+62								Car Values ?
+63                              Car Values ?
+64                              Car Values ?
+65                              Car Values ?
+66			Spr00_Tile			Sprite 00 Tile ($200:$20F)
+
+68			Spr04_Tile			Sprite 04 Tile : Sprite 04 ($211)
+69			Spr17_Tile			Sprite 17 Tile : Sprite 17 ($25D)
+6A			Spr18_Tile			Sprite 18 Tile : Sprite 18 ($260)
+6B			Spr19_Tile			Sprite 19 Tile : Sprite 19 ($265)
+
+7C								Car Values?
+7D								Car Values?
+7E                              Car Values?
+7F                              Car Values?
 
 91								Flags : .... ...A
 									A : ???
@@ -47,16 +92,21 @@ AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
 AC								Init #$10
 
+C6								Car Values ?
+C7                              Car Values ?
+C8                              Car Values ?
+C9                              Car Values ?
+
 ### Stack ###
 100:1FF							System Stack
 
 ### OAM RAM ###
 Super Sprint uses static sprites to draw everything
 200			Spr_00				Sprite_00 : 16x16 sprite
-204			Spr_01				
-208			Spr_02				
+204			Spr_01
+208			Spr_02
 20C			Spr_03
-				
+
 210			Spr_04				Sprite_04 : 8x8 sprite
 
 214			Spr_05				CarSprite_1	: 16x16 sprite
@@ -102,11 +152,15 @@ Super Sprint uses static sprites to draw everything
 31A								Init to $DC
 31B								Init to $B8
 
+31D								Randomization ?
+
 323								Init to #$40
 32D								Flags : AB.. ....
 									A : ???
 									B : ???
-									
+
+33C			CurrentTrack		The current track the racers are on.
+
 33F								Shadow_A
 340								Shadow_X
 341								Shadow_Y
