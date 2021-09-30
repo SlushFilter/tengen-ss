@@ -9,9 +9,13 @@
 
 09								General use ?
 
+0A								
 0B			FrameCounter		Incremented by one every NMI
+0D			InitTrackFlag		Flags : A... ....
+									A : Initialize TrackFlag Latch
 
-12			JoypadStartOnly		Only read Start button inputs if non-zero
+12			GamePaused			Pause the game, only read Start button inputs 
+								if non-zero
 13								CHR Table Index to be loaded into VRAM $0000
 14			ScreenIndex			Index of Screen Data : Init to #$09
 
@@ -71,7 +75,7 @@
 64                              Car Values ?
 65                              Car Values ?
 66			Spr00_Tile			Sprite 00 Tile ($200:$20F)
-
+67								#$C5 or #$D5
 68			Spr04_Tile			Sprite 04 Tile : Sprite 04 ($211)
 69			Spr17_Tile			Sprite 17 Tile : Sprite 17 ($25D)
 6A			Spr18_Tile			Sprite 18 Tile : Sprite 18 ($260)
@@ -82,10 +86,14 @@
 7E                              Car Values?
 7F                              Car Values?
 
-91								Flags : .... ...A
+91:94		CarFlags			Flags : AB.. C..D
 									A : ???
-92								Flags : AB.. ....
-									A : (0) Hide Sprite 1C (1) Show Sprite 1C
+									B : ???
+									C : ???
+									D : (0) Hide Sprite 1C (1) Show Sprite 1C
+
+9D:A0							Car Noclip Flag ?
+
 A1			Car1_OamIdx			OAM Index offset from $214 for Car1
 A2			Car2_OamIdx			OAM Index offset from $214 for Car2
 A3			Car3_OamIdx			OAM Index offset from $214 for Car3
@@ -99,18 +107,17 @@ AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
 AC								Init #$10
 
-C6								Car Values ?
-C7                              Car Values ?
-C8                              Car Values ?
-C9                              Car Values ?
+C6:C9		CollisionInfo		BlockMap data of the car's rough position.
+
+CE								#$00
 
 ### Stack ###
 100:1FF							System Stack
 
 ### OAM RAM ###
 Super Sprint uses static sprites to draw everything
-200			Spr_00				Sprite_00 : 16x16 sprite
-204			Spr_01
+200			Spr_00				Sprite_00 : 16x16 sprite Used for :
+204			Spr_01				Flags, Whirlwind, Driver Helmet and PAUSE
 208			Spr_02
 20C			Spr_03
 
@@ -136,18 +143,18 @@ Super Sprint uses static sprites to draw everything
 24C			Spr_13
 250			Spr_14
 
-254			Spr_15				
-258			Spr_16
+254			Spr_15				Track Points Left Sprite
+258			Spr_16				Track Points Right Sprite
 25C			Spr_17
 260			Spr_18
 264			Spr_19
-268			Spr_1A
-26C			Spr_1B				Sprite_1B : 8x8 sprite
+268			Spr_1A				Used for Track Wrenches
+26C			Spr_1B				Used for Obstacles
 
-270			Spr_1C
-274			Spr_1D
-278			Spr_1E
-27C			Spr_1F
+270			Spr_1C				P
+274			Spr_1D				1
+278			Spr_1E				P
+27C			Spr_1F				2
 
 ### Work RAM ###
 300:307							305 is init to #$F5
@@ -160,17 +167,22 @@ Super Sprint uses static sprites to draw everything
 
 31D								Randomization ?
 
+322								Spr00 Attrib Mirror ?
 323								Flags : AB.. ....  : Init to #$40 
 									A : (1) Do not draw Sprite 00
 									B : ??
+324								#$03
+32B								#$08
 
 330								Randomized?
-									
+	
+32A								Spr00 Attrib Mirror ?									
 32D								Flags : AB.. ....
 									A : ???
 									B : ???
 									
 330			Var_330				Randomized value between 0:3
+
 331:333		Var_331				Array related to PpuAddr buffers
 334:336		PpuAddr_Lo			Ppu Address Buffers 
 337:339		PpuAddr_Hi			Ppu Address Buffers 
