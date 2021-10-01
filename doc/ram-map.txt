@@ -81,13 +81,15 @@
 6A			Spr18_Tile			Sprite 18 Tile : Sprite 18 ($260)
 6B			Spr19_Tile			Sprite 19 Tile : Sprite 19 ($265)
 
+74:77							Array of some sort?
+
 7C								Car Values?
 7D								Car Values?
 7E                              Car Values?
 7F                              Car Values?
 
-91:94		CarFlags			Flags : AB.. C..D
-									A : ???
+91:94		CarFlags			Flags : PB.. C..D
+									P : (0) CPU Controlled (1) Player Controlled
 									B : ???
 									C : ???
 									D : (0) Hide Sprite 1C (1) Show Sprite 1C
@@ -106,6 +108,10 @@ A9			Spr_00_Attr			OAM Attribute for Sprite 00, 01, 02, 03
 AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
 AC								Init #$10
+
+B2:B5							Array of some sort.. i think
+B6:B9							Array of some sort.. i think
+BA:BD							Array of some sort.. i think
 
 C6:C9		CollisionInfo		BlockMap data of the car's rough position.
 
@@ -176,7 +182,7 @@ Super Sprint uses static sprites to draw everything
 
 330								Randomized?
 	
-32A								Spr00 Attrib Mirror ?									
+32A								Spr00 Attrib Mirror 									
 32D								Flags : AB.. ....
 									A : ???
 									B : ???
@@ -187,7 +193,11 @@ Super Sprint uses static sprites to draw everything
 334:336		PpuAddr_Lo			Ppu Address Buffers 
 337:339		PpuAddr_Hi			Ppu Address Buffers 
 
+
 33C			CurrentTrack		The current track the racers are on.
+
+33D								??
+33E                             Init to #$03
 
 33F								Shadow_A
 340								Shadow_X

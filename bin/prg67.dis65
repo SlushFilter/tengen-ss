@@ -2809,6 +2809,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_33D":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_33D",
+"Value":829,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_33E":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_33E",
+"Value":830,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_35E":{
 "DataDescriptor":{
 "Length":1,
@@ -2879,13 +2913,13 @@
 
 "Var_74":{
 "DataDescriptor":{
-"Length":1,
+"Length":4,
 "Format":"NumericLE",
 "SubFormat":"Hex",
 "SymbolRef":null},
 
 "Comment":"",
-"HasWidth":false,
+"HasWidth":true,
 "Direction":"ReadWrite",
 "MultiMask":null,
 "Label":"Var_74",
@@ -3009,6 +3043,57 @@
 "MultiMask":null,
 "Label":"Var_AC",
 "Value":172,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_B2":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_B2",
+"Value":178,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_B6":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_B6",
+"Value":182,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_BA":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_BA",
+"Value":186,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3494,6 +3579,13 @@
 "7867":" Offset right by 8",
 "7911":" Always draw as tile #$7B",
 "7971":" Sprite Y = #$17",
+"8545":" $82A5",
+"8546":" $8BC1",
+"8547":" $9553",
+"8548":" $9EAF",
+"8549":" $A7F3",
+"8550":" $B13E",
+"8551":" $B9FB",
 "8573":" Track 1 : $8000 ",
 "8574":" Track 3 : $892d",
 "8575":" Track 5 : $9249",
@@ -5423,7 +5515,7 @@
 "LabelAnno":"None"},
 
 "5915":{
-"Label":"bit7_NotSet",
+"Label":"cpuControlled",
 "Value":55067,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
@@ -5434,6 +5526,13 @@
 "Value":55060,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6184":{
+"Label":"_PlayerControlled",
+"Value":55336,
+"Source":"User",
+"Type":"GlobalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
@@ -6896,6 +6995,30 @@
 "SymbolRef":null},
 
 "8544":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8569":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8570":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8571":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8572":{
 "Length":1,
 "Format":"NumericLE",
 "SubFormat":"None",
