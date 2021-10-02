@@ -22,6 +22,8 @@
 1B								Joypad input buffer ?
 1C								General use ?
 1D								General use ?
+1E								Init to #$00
+1F								Init to #$30
 
 27								General use ?
 28                              General use ?
@@ -94,7 +96,8 @@
 									C : ???
 									D : (0) Hide Sprite 1C (1) Show Sprite 1C
 
-9D:A0							Car Noclip Flag ?
+9D:A0							Flags : .... ...0
+									0 : ???
 
 A1			Car1_OamIdx			OAM Index offset from $214 for Car1
 A2			Car2_OamIdx			OAM Index offset from $214 for Car2
@@ -167,7 +170,7 @@ Super Sprint uses static sprites to draw everything
 30A:311							30F is init to #$F5
 317
 318
-319								If non-zero, Sprite 00 gets drawn.
+319			Difficulty			Difficulty Selector
 31A								Init to $DC
 31B								Init to $B8
 
@@ -202,6 +205,8 @@ Super Sprint uses static sprites to draw everything
 33F								Shadow_A
 340								Shadow_X
 341								Shadow_Y
+
+35C								Related to $7C?
 
 0500:05FF						Audio Registers
 

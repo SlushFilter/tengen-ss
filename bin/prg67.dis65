@@ -446,6 +446,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Difficulty":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Difficulty",
+"Value":793,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "FrameCounter":{
 "DataDescriptor":{
 "Length":1,
@@ -2333,6 +2350,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_08":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_08",
+"Value":8,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_09":{
 "DataDescriptor":{
 "Length":1,
@@ -2414,6 +2448,40 @@
 "MultiMask":null,
 "Label":"Var_1D",
 "Value":29,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_1E":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_1E",
+"Value":30,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_1F":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_1F",
+"Value":31,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2601,23 +2669,6 @@
 "MultiMask":null,
 "Label":"Var_318",
 "Value":792,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
-"Var_319":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_319",
-"Value":793,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2839,6 +2890,23 @@
 "MultiMask":null,
 "Label":"Var_33E",
 "Value":830,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_35C":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_35C",
+"Value":860,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3520,6 +3588,14 @@
 "5903":" Shift the bottom two bits off and store all but ..",
 "5904":" .. bit0 into the $C6[].",
 "5906":" $C6[X] = (A)..76 543.",
+"6499":" (word)Var_05 \u003e\u003e 1",
+"6501":" Index is stored in the bits of :",
+"6503":" ..  $7C[X] ..xx xxx.",
+"6506":" Var_35C = Index bits from $7C[X]",
+"6510":" Fetch ABS(Sin(Y))",
+"6513":" $08 = AbsSin",
+"6515":"   A = $05",
+"6517":" $07 = $05",
 "6738":" X = Nametable Seleciton",
 "6740":" Enable NMI",
 "6745":" Wait for a VBlank",
@@ -3668,6 +3744,13 @@
 "13798":" Write (word)Var_05 bytes of data to palette ram.",
 "13803":" Increment (word)Var_01",
 "13809":" Decrement (word)Var_05",
+"14129":" $1E = #$00",
+"14133":" $1F = #$30",
+"14144":" Set CarOam Index to Var_1E",
+"14146":" Increase Var_1E by #$10",
+"14157":" Set CarOam Index to Var_1F",
+"14159":" Decrease Var_1F by #$10",
+"14167":" Next Car",
 "14340":" Disable NMI",
 "14348":" Enable NMI",
 "14375":" Call LoRom Function $8006",
@@ -4102,6 +4185,30 @@
 
 "8545":{
 "Text":"-- Blockmap Pointers for Track Collision --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"14144":{
+"Text":"-- Assign Car OamIdx starting at base $00 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"14157":{
+"Text":"-- Assign CarOam Index starting at base $30 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"6501":{
+"Text":"-- Calculate Index into $E219 Data --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"8729":{
+"Text":"-- Absolute Sine Wave Table --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0}},
@@ -5340,11 +5447,11 @@
 "LabelAnno":"None"},
 
 "5596":{
-"Label":"F_D5DC_FinishLine",
+"Label":"F_InitRoadcones",
 "Value":54748,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Uncertain"},
+"LabelAnno":"None"},
 
 "79":{
 "Label":"TC04F",
@@ -5354,14 +5461,14 @@
 "LabelAnno":"Generated"},
 
 "5399":{
-"Label":"D_GoalSpriteDataPtr_Lo",
+"Label":"D_RoadConeDataPtr_Lo",
 "Value":54551,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"},
 
 "5406":{
-"Label":"D_GoalSpriteDataPtr_Hi",
+"Label":"D_RoadConeDataPtr_Hi",
 "Value":54558,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -5375,11 +5482,11 @@
 "LabelAnno":"None"},
 
 "6951":{
-"Label":"F_DrawSteeringWheel",
+"Label":"F_InitP1P2Hud",
 "Value":56103,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Uncertain"},
+"LabelAnno":"None"},
 
 "4931":{
 "Label":"cleanupReturn",
@@ -5531,6 +5638,104 @@
 "6184":{
 "Label":"_PlayerControlled",
 "Value":55336,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14137":{
+"Label":"loop",
+"Value":63289,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"14157":{
+"Label":"bit0_isSet",
+"Value":63309,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"14127":{
+"Label":"F_AssignCarOamIndexes",
+"Value":63279,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"8729":{
+"Label":"D_ABS_SIN",
+"Value":57881,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"7333":{
+"Label":"F_Unrolled",
+"Value":56485,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"7347":{
+"Label":"nextbit_1",
+"Value":56499,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7359":{
+"Label":"nextbit_2",
+"Value":56511,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7371":{
+"Label":"nextbit_3",
+"Value":56523,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7383":{
+"Label":"nextbit_4",
+"Value":56535,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7395":{
+"Label":"nextbit_5",
+"Value":56547,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7407":{
+"Label":"nextbit_6",
+"Value":56559,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7419":{
+"Label":"nextbit_7",
+"Value":56571,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7431":{
+"Label":"return",
+"Value":56583,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6497":{
+"Label":"F_UpdatePosition",
+"Value":55649,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"}},
@@ -7557,6 +7762,102 @@
 "SymbolRef":{
 "Label":"PALETTE_CD27",
 "Part":"High"}},
+
+"8730":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8731":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8732":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8733":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8741":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8742":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8743":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8744":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8746":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8747":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8748":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8749":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8757":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8758":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8759":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"8760":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
 
 "10352":{
 "Length":2,
