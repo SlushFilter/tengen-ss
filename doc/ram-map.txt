@@ -14,6 +14,8 @@
 0D			InitTrackFlag		Flags : A... ....
 									A : Initialize TrackFlag Latch
 
+0E								Something to do with AI car handling ?
+
 12			GamePaused			Pause the game, only read Start button inputs 
 								if non-zero
 13								CHR Table Index to be loaded into VRAM $0000
@@ -41,6 +43,8 @@
 30								Init to #$1E
 31			NametableTarget		Init to #$00	:
 
+33:34							2 byte array ?
+
 36			Spr1A_Y				Sprite 1A Y : Sprite 1A ($268)
 37			Spr1A_X				Sprite 1A X : Sprite 1A ($26B)
 38			Spr1B_Y				Sprite 1B Y : Sprite 1B ($26C)
@@ -56,44 +60,43 @@
 42			Spr18_X				Sprite 18 X : Sprite 18 ($263)
 43			Spr19_X				Sprite 19 X : Sprite 19 ($267)
 
-4C			Car1_Y				Car1 Y Position
-4D          Car2_Y				Car2 Y Position
-4E          Car3_Y				Car3 Y Position
-4F          Car4_Y				Car4 Y Position
+4C:4F		Car_Y				Car1 Y Positions
 
 50			Spr00_Y				Sprite 00 Y ($200:$20F)
 51			Spr04_Y				Sprite 04 Y ($210)
 
-57			Car1_X				Car1 X Position
-58          Car2_X              Car2 X Position
-59          Car3_X              Car3 X Position
-5A          Car4_X              Car4 X Position
+57:5A		Car_X				Car X Position
+
 5B			Spr00_X				Sprite 00 X ($200:$20F)
 
 5C			Spr04_X				Sprite 04 X ($213)
 
-62								Car Values ?
-63                              Car Values ?
-64                              Car Values ?
-65                              Car Values ?
+62:65		CarFacing			Angle of the car's nose.
 66			Spr00_Tile			Sprite 00 Tile ($200:$20F)
 67								#$C5 or #$D5
+
 68			Spr04_Tile			Sprite 04 Tile : Sprite 04 ($211)
 69			Spr17_Tile			Sprite 17 Tile : Sprite 17 ($25D)
 6A			Spr18_Tile			Sprite 18 Tile : Sprite 18 ($260)
 6B			Spr19_Tile			Sprite 19 Tile : Sprite 19 ($265)
 
-74:77							Array of some sort?
+74:77		CarSpeed			Current Speed of the Car
+78:7B		CarSpeedSub			Current Subpixel Speed of the Car
+7C:7F		CarDirection		Current Direction the car is traveling.
+									iixx xxxi
+									i: Invisible component to the car's angle.
+									x: Index into $E219, this portion of the
+									   angle is used to figure out how to draw
+									   the car.
 
-7C								Car Values?
-7D								Car Values?
-7E                              Car Values?
-7F                              Car Values?
+85:88		CarTraction			Car Traction Level
+89:8C		CarAccel			Car Acelleration Level
+8D:90		CarSomething?		Car Something ?
 
-91:94		CarFlags			Flags : PB.. C..D
-									P : (0) CPU Controlled (1) Player Controlled
+91:94		CarFlags			Flags : PB.. S..D
+									P : (0) Player Control (1) CPU Control
 									B : ???
-									C : ???
+									S : (1) Car is spinning out of control
 									D : (0) Hide Sprite 1C (1) Show Sprite 1C
 
 9D:A0							Flags : .... ...0
@@ -206,7 +209,12 @@ Super Sprint uses static sprites to draw everything
 340								Shadow_X
 341								Shadow_Y
 
-35C								Related to $7C?
+342:343		CarSFX				Current Sound effect ## the car is playing.
 
-0500:05FF						Audio Registers
+35C								Index into $E219
+
+500:5FF							Audio Registers
+500:50F	SoundFXQueue			Sound effect slots.
+511		SoundIndex				Current audio queue index to write to. (0:F)
+510		SoundLastIndex			Last processed index (0:F)
 

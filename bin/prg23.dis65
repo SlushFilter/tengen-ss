@@ -21,7 +21,73 @@
 "PlatformSymbolFileIdentifiers":["RT:Nintendo/NES.sym65"],
 "ExtensionScriptFileIdentifiers":[],
 "ProjectSyms":{
-}},
+"SoundFXQueue":{
+"DataDescriptor":{
+"Length":16,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"SoundFXQueue",
+"Value":1280,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"SoundIndex":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"SoundIndex",
+"Value":1297,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"SoundLastIndex":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"SoundLastIndex",
+"Value":1296,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_FF":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_FF",
+"Value":255,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"}}},
 
 "AddressMap":[{
 "Offset":0,
@@ -53,7 +119,12 @@
 },
 
 "Comments":{
-},
+"8201":" Backup Y",
+"8203":" Queue the Sound Effect (A)",
+"8206":" Restore Y",
+"8265":" Keep $511 in the range of 00:0F",
+"8283":" Return - All SFX slots in use this frame.",
+"8286":" Add SFX Id A to the SFX Queue"},
 
 "LongComments":{
 "-2147483647":{
@@ -80,7 +151,7 @@
 "LabelAnno":"None"},
 
 "8201":{
-"Label":"F_8009",
+"Label":"F_QueueSFX_A",
 "Value":32777,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -96,6 +167,34 @@
 "8192":{
 "Label":"V_InitAudio",
 "Value":32768,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"8275":{
+"Label":"continue",
+"Value":32851,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"8286":{
+"Label":"queueSound",
+"Value":32862,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"8265":{
+"Label":"F_QueueSFX_B",
+"Value":32841,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"8195":{
+"Label":"V_QueueSFX",
+"Value":32771,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"}},
