@@ -21,7 +21,7 @@
 13								CHR Table Index to be loaded into VRAM $0000
 14			ScreenIndex			Index of Screen Data : Init to #$09
 
-1B								Joypad input buffer ?
+1B								Worker var, used in angle calculations.
 1C								General use ?
 1D								General use ?
 1E								Init to #$00
@@ -60,7 +60,7 @@
 42			Spr18_X				Sprite 18 X : Sprite 18 ($263)
 43			Spr19_X				Sprite 19 X : Sprite 19 ($267)
 
-4C:4F		Car_Y				Car1 Y Positions
+4C:4F		Car_Y				Car Y Positions
 
 50			Spr00_Y				Sprite 00 Y ($200:$20F)
 51			Spr04_Y				Sprite 04 Y ($210)
@@ -93,9 +93,10 @@
 89:8C		CarAccel			Car Acelleration Level
 8D:90		CarSomething?		Car Something ?
 
-91:94		CarFlags			Flags : PB.. S..D
+91:94		CarFlags			Flags : PBC. S..D
 									P : (0) Player Control (1) CPU Control
 									B : ???
+									C : ???
 									S : (1) Car is spinning out of control
 									D : (0) Hide Sprite 1C (1) Show Sprite 1C
 

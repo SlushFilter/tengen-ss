@@ -21,23 +21,6 @@
 "PlatformSymbolFileIdentifiers":["RT:Nintendo/NES.sym65"],
 "ExtensionScriptFileIdentifiers":[],
 "ProjectSyms":{
-"AbsSin":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"AbsSin",
-"Value":8,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
 "BootConst":{
 "DataDescriptor":{
 "Length":3,
@@ -51,6 +34,40 @@
 "MultiMask":null,
 "Label":"BootConst",
 "Value":788,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Car_SubX":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Car_SubX",
+"Value":93,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Car_SubY":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Car_SubY",
+"Value":82,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -408,6 +425,23 @@
 "MultiMask":null,
 "Label":"CarDirection",
 "Value":124,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"CarDirectionSub":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"CarDirectionSub",
+"Value":129,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2503,6 +2537,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_08":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_08",
+"Value":8,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_09":{
 "DataDescriptor":{
 "Length":1,
@@ -3702,6 +3753,7 @@
 "5781":" Next bit if C is clear",
 "5784":" A = A + $1D",
 "5788":" Used to set bit0 of $1B per loop",
+"5815":" Reset $05 and $06 to #$00",
 "5823":" Return if Paused",
 "5827":" If $0D.bit7 is already set, skip the function call",
 "5831":" Set $0D.bit7 indicating the track flag ..",
@@ -3729,7 +3781,27 @@
 "5927":" Decelerate car if CarFlags bit4 or bit1 are set.",
 "5933":" $1B = CarDirection bits ..xx xxx.",
 "5946":" $1B is the difference in the two angles.",
+"5948":" Branch to @gasPedal if CarFacing == CarDirection",
+"5954":" Branch to rotation if CarFlags.bit5 is set",
+"5958":" Check to see if car is out of control.",
+"5962":" Set traction to #$05",
+"5966":" Get traction data depending on traction tier ..",
+"5968":" .. or use traction tier 5 if out of control.",
+"5980":" Fetch Traction data from the table based ..",
+"5982":" .. on current speed.",
+"5990":" (word)$05 = Traction * 2",
+"5993":" A = $1B (Difference in facing and travel dir)",
+"5995":" Branch if the angle difference is negative",
+"5999":" Rotate left if difference \u003e= #$20",
+"6001":" Rotate right if difference \u003c #$20",
+"6005":" Rotate left if difference \u003e= #$E0",
+"6007":" Rotate right if difference \u003c #$E0",
 "6036":" Check for player pressing the gas pedal!",
+"6048":" Rotate the car to face the direction of travel.",
+"6054":" Rotate right if the angle is \u003e= #$20",
+"6056":" Rotate left if the angle is \u003c #$20",
+"6058":" Rotate right if the angle is \u003e= #$E0",
+"6060":" Rotate left if the angle is \u003c #$E0",
 "6078":" Fetch the Acceleration List based on upgrade ..",
 "6080":" .. tier.",
 "6097":" Apply acceleration to (word)CarSpeed",
@@ -3748,9 +3820,8 @@
 "6474":" Push Y",
 "6495":" Pop Y",
 "6499":" (word)Var_05 \u003e\u003e 1",
-"6501":" Index is stored in the bits of :",
-"6503":" ..  $7C[X] ..xx xxx.",
-"6506":" Var_35C = Index bits from $7C[X]",
+"6501":" Get the significant direction bits.",
+"6506":" $35C = CarDirection (Angle)",
 "6510":" Fetch ABS(Sin(Y))",
 "6513":" $08 = AbsSin",
 "6515":"   A = $05",
@@ -3805,6 +3876,7 @@
 "7082":" Same as above, but with Joy2_State",
 "7102":" Only return Start button input if $12 is ..",
 "7104":" .. non-zero",
+"7325":" Keep CarFacing in the range of 0:3F ",
 "7523":" Write Car 1 Sprites",
 "7585":" Write Car 2 Sprites",
 "7647":" Write Car 3 Sprites",
@@ -4423,6 +4495,48 @@
 "5933":{
 "Text":"-- Calculate Difference Between Direction of Travel and Facing --",
 "BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"5950":{
+"Text":"-- Check Car Flags --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"5966":{
+"Text":"-- Fetch Traction Level --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"6009":{
+"Text":"-- (Traction) Rotate Car Right --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"6023":{
+"Text":"-- (Traction) Rotate Car Left --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"6036":{
+"Text":"-- Check for Gas Pedal --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"6048":{
+"Text":"-- (Facing) Update Car Rotation --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"7333":{
+"Text":"F_Multiply\r\n\r\nMultiplies Var_07 by Var_08\r\n\r\n- Arguments\r\n($07) Var_07 : The number to multiply\r\n($08) Var_08 : The number to multiply by.\r\n\r\n- Returns\r\n           A : Lo byte of the result of the operation.\r\n($07) Var_07 : Hi byte of the result of the operation.\r\n",
+"BoxMode":true,
 "MaxWidth":80,
 "BackgroundColor":0}},
 
@@ -5884,7 +5998,7 @@
 "LabelAnno":"None"},
 
 "7333":{
-"Label":"F_Unrolled",
+"Label":"F_Multiply",
 "Value":56485,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -6245,6 +6359,83 @@
 "Value":55188,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6070":{
+"Label":"rotateRight",
+"Value":55222,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6062":{
+"Label":"rotateLeft",
+"Value":55214,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6048":{
+"Label":"rotateCar",
+"Value":55200,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6058":{
+"Label":"checkRotDir_B",
+"Value":55210,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"7324":{
+"Label":"F_CarFacingMod_3F",
+"Value":56476,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"5966":{
+"Label":"notSpinning",
+"Value":55118,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"5968":{
+"Label":"spinning",
+"Value":55120,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6007":{
+"Label":"addTractionAngle",
+"Value":55159,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6023":{
+"Label":"subTractionAngle",
+"Value":55175,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"6003":{
+"Label":"checkRotDir_A",
+"Value":55155,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"5815":{
+"Label":"F_SteerCar",
+"Value":54967,
+"Source":"User",
+"Type":"GlobalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
