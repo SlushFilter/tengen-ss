@@ -2605,6 +2605,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_18":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_18",
+"Value":24,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_19":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_19",
+"Value":25,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_1B":{
 "DataDescriptor":{
 "Length":1,
@@ -3268,6 +3302,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_99":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_99",
+"Value":153,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_9D":{
 "DataDescriptor":{
 "Length":4,
@@ -3298,6 +3349,23 @@
 "MultiMask":null,
 "Label":"Var_AC",
 "Value":172,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_B1":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_B1",
+"Value":177,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3417,6 +3485,23 @@
 "MultiMask":null,
 "Label":"Var_CE",
 "Value":206,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_CF":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_CF",
+"Value":207,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"}}},
@@ -3674,7 +3759,24 @@
 "3598":" ScreenIndex = #$0B",
 "3600":" NametableTarget = #$00",
 "3602":" Load Screen #$0B (Player Select Screen)",
+"3608":" Branch if $32D.bit7 is set",
+"3612":" Play SFX $1C",
+"3617":" $1D = 0",
+"3619":" Reset Frame Counter",
+"3623":" Spr00_X = #$50",
+"3629":" Clear CarFlags[0].bit7",
+"3638":" Set $32D.bit7 and toggle $32D.bit0",
+"3643":" Branch if bit0 was cleared from the XOR operation",
+"3647":" Spr00_Y = #$70",
+"3656":" Set Var_92.bit7",
+"3662":" Spr00_Y = #$80",
+"3671":" Clear $92.bit7",
 "3673":" Set an 8 second timer",
+"3680":" Branch to Title Screen after 8 seconds of idling.",
+"3686":" Check for Up, Down or Select button presses ..",
+"3688":" .. and branch to capture them.",
+"3692":" Check for start button press on P1 controller",
+"3698":" Check for start button press on P2 controller",
 "3774":" Return A = 0 if $0B != #$3C",
 "3776":" Otherwise Set $0B = #$00 ..",
 "3778":" .. and decrement #$00 ..",
@@ -3886,6 +3988,9 @@
 "7867":" Offset right by 8",
 "7911":" Always draw as tile #$7B",
 "7971":" Sprite Y = #$17",
+"8005":" Set top half of 2x2 Sprite 00",
+"8022":" Set bottom half of 2x2 Sprite 00",
+"8039":" Set Sprite 00 Tile",
 "8545":" $82A5",
 "8546":" $8BC1",
 "8547":" $9553",
@@ -3981,6 +4086,15 @@
 "13798":" Write (word)Var_05 bytes of data to palette ram.",
 "13803":" Increment (word)Var_01",
 "13809":" Decrement (word)Var_05",
+"14002":" Y = (A \u0026 #$3E) \u003e\u003e 1",
+"14006":" Read byte in from $F6DF data array",
+"14010":" $B1 = Data Byte",
+"14018":" Spr04_X = $18 + $F717[Y]",
+"14026":" Spr04_Y = $19 + $F723[Y]",
+"14031":" Spr04_Attr =$F70B[Y]",
+"14035":" $99 = #$80",
+"14039":" $CF = #$0C",
+"14044":" Spr04_Tile = $F6FF[Y]",
 "14129":" $1E = #$00",
 "14133":" $1F = #$30",
 "14144":" Set CarOam Index to Var_1E",
@@ -6436,6 +6550,83 @@
 "Value":54967,
 "Source":"User",
 "Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14103":{
+"Label":"D_OFSX_F717",
+"Value":63255,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14079":{
+"Label":"D_TILEANIM_F6FF",
+"Value":63231,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14115":{
+"Label":"D_OFSY_F723",
+"Value":63267,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14091":{
+"Label":"D_ATTRIB_F70B",
+"Value":63243,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"14002":{
+"Label":"F_UpdateSpr04",
+"Value":63154,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3605":{
+"Label":"L_CE15",
+"Value":52757,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3673":{
+"Label":"bit7_isSet",
+"Value":52825,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"3660":{
+"Label":"bit0_isClear",
+"Value":52812,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"8005":{
+"Label":"F_UpdateSpr00",
+"Value":57157,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3732":{
+"Label":"pressStartP1",
+"Value":52884,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"3718":{
+"Label":"pressStartP2",
+"Value":52870,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
@@ -13689,6 +13880,186 @@
 "SubFormat":"None",
 "SymbolRef":null},
 
+"14079":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14080":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14081":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14082":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14083":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14084":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14085":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14086":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14087":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14088":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14089":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14090":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14106":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14107":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14108":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14109":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14110":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14111":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14115":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14116":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14117":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14118":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14119":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14120":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14121":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14122":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14123":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14124":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14125":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"14126":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
 "14421":{
 "Length":16,
 "Format":"Dense",
@@ -14327,6 +14698,60 @@
 
 "16117":{
 "Length":11,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16237":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16253":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16269":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16285":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16301":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16317":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16333":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16349":{
+"Length":16,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"16365":{
+"Length":13,
 "Format":"Dense",
 "SubFormat":"None",
 "SymbolRef":null},

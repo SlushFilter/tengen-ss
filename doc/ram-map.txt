@@ -21,6 +21,9 @@
 13								CHR Table Index to be loaded into VRAM $0000
 14			ScreenIndex			Index of Screen Data : Init to #$09
 
+18								Sprite 04 X
+19								Sprite 04 Y
+
 1B								Worker var, used in angle calculations.
 1C								General use ?
 1D								General use ?
@@ -77,7 +80,7 @@
 
 68			Spr04_Tile			Sprite 04 Tile : Sprite 04 ($211)
 69			Spr17_Tile			Sprite 17 Tile : Sprite 17 ($25D)
-6A			Spr18_Tile			Sprite 18 Tile : Sprite 18 ($260)
+6A			Spr18_Tile			Sprite  18 Tile : Sprite 18 ($260)
 6B			Spr19_Tile			Sprite 19 Tile : Sprite 19 ($265)
 
 74:77		CarSpeed			Current Speed of the Car
@@ -115,7 +118,7 @@ A9			Spr_00_Attr			OAM Attribute for Sprite 00, 01, 02, 03
 AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
 AC								Init #$10
-
+B1								Data from the F6DF array
 B2:B5							Array of some sort.. i think
 B6:B9							Array of some sort.. i think
 BA:BD							Array of some sort.. i think
