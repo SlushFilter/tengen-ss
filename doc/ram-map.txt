@@ -74,7 +74,7 @@
 
 5C			Spr04_X				Sprite 04 X ($213)
 
-62:65		CarFacing			Angle of the car's nose.
+62:65		Car_Facing			Angle of the car's facing or desired direction.
 66			Spr00_Tile			Sprite 00 Tile ($200:$20F)
 67								#$C5 or #$D5
 
@@ -83,18 +83,18 @@
 6A			Spr18_Tile			Sprite  18 Tile : Sprite 18 ($260)
 6B			Spr19_Tile			Sprite 19 Tile : Sprite 19 ($265)
 
-74:77		CarSpeed			Current Speed of the Car
-78:7B		CarSpeedSub			Current Subpixel Speed of the Car
-7C:7F		CarDirection		Current Direction the car is traveling.
+74:77		Car_Vel				Current Speed of the Car
+78:7B		Car_SubVel			Current Subpixel Speed of the Car
+7C:7F		Car_Dir				Current Direction the car is traveling.
 									iixx xxxi
 									i: Invisible component to the car's angle.
 									x: Index into $E219, this portion of the
 									   angle is used to figure out how to draw
 									   the car.
-
-85:88		CarTraction			Car Traction Level
-89:8C		CarAccel			Car Acelleration Level
-8D:90		CarSomething?		Car Something ?
+81:84		Car_SubDir			Fractional angle of the direction of travel.
+85:88		Car_Traction		Traction Upgrade Tier
+89:8C		Car_Accel			Acceleration Upgrade Tier
+8D:90		Car_TopSpeed		Top Speed Upgrate Tier
 
 91:94		CarFlags			Flags : PBC. S..D
 									P : (0) Player Control (1) CPU Control
@@ -106,14 +106,8 @@
 9D:A0							Flags : .... ...0
 									0 : ???
 
-A1			Car1_OamIdx			OAM Index offset from $214 for Car1
-A2			Car2_OamIdx			OAM Index offset from $214 for Car2
-A3			Car3_OamIdx			OAM Index offset from $214 for Car3
-A4			Car4_OamIdx			OAM Index offset from $214 for Car4
-A5			Car1_Attr			OAM Attribute for Car1
-A6			Car2_Attr			OAM Attribute for Car2
-A7			Car3_Attr			OAM Attribute for Car3
-A8			Car4_Attr			OAM Attribute for Car4
+A1:A4		Car_OamIdx			OAM Index offset from $214 for Car1
+A5:A8		Car_Attr			OAM Attribute for Car sprites
 A9			Spr_00_Attr			OAM Attribute for Sprite 00, 01, 02, 03
 AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
@@ -122,7 +116,8 @@ B1								Data from the F6DF array
 B2:B5							Array of some sort.. i think
 B6:B9							Array of some sort.. i think
 BA:BD							Array of some sort.. i think
-
+BE:C1							Array of some sort .. blockmap?
+C2:C5							Array of some sort .. blockmap
 C6:C9		CollisionInfo		BlockMap data of the car's rough position.
 
 CE								#$00
@@ -216,7 +211,7 @@ Super Sprint uses static sprites to draw everything
 342:343		CarSFX				Current Sound effect ## the car is playing.
 
 35C								Index into $E219
-
+35E								Init to #03
 500:5FF							Audio Registers
 500:50F	SoundFXQueue			Sound effect slots.
 511		SoundIndex				Current audio queue index to write to. (0:F)
