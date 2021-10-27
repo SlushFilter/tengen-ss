@@ -168,8 +168,13 @@ Super Sprint uses static sprites to draw everything
 27C			Spr_1F				2
 
 ### Work RAM ###
-300:307							305 is init to #$F5
-30A:311							30F is init to #$F5
+300:305		HudScore_P1			Score hud display for Player 1
+306:308		HudWrenches_P1		Wrench hud display for Player 1
+309			HudLaps_P1			Lap hud display for Player 1
+30A:30F		HudScore_P2			Score hud display for Player 2
+310:312		HudWrenches_P2      Wrench hud display for Player 2
+313			HudLaps_P2			Lap hud display for Player 2
+
 317
 318
 319			Difficulty			Difficulty Selector
