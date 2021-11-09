@@ -1806,6 +1806,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Spr00_ObjBase":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Spr00_ObjBase",
+"Value":206,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Spr00_Tile":{
 "DataDescriptor":{
 "Length":1,
@@ -2146,6 +2163,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Sprite0_Flags":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Sprite0_Flags",
+"Value":803,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "V_QueueSFX":{
 "DataDescriptor":{
 "Length":1,
@@ -2350,6 +2384,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_0C":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_0C",
+"Value":12,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_0E":{
 "DataDescriptor":{
 "Length":1,
@@ -2363,6 +2414,23 @@
 "MultiMask":null,
 "Label":"Var_0E",
 "Value":14,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_10":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_10",
+"Value":16,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2758,23 +2826,6 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
-"Var_323":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_323",
-"Value":803,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
 "Var_324":{
 "DataDescriptor":{
 "Length":1,
@@ -3064,6 +3115,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_80":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_80",
+"Value":128,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_92":{
 "DataDescriptor":{
 "Length":1,
@@ -3196,23 +3264,6 @@
 "MultiMask":null,
 "Label":"Var_BA",
 "Value":186,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
-"Var_CE":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_CE",
-"Value":206,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3531,8 +3582,11 @@
 "4192":" Reset Joypad input states",
 "4272":" Nametable = 0",
 "4278":" Clear Nametable 0",
-"4281":" Initialize some track vars ?",
-"4286":" $323 = #$C0",
+"4281":" Hide track sprites.",
+"4286":" Do not draw Sprite 0 and bit6 flag",
+"4313":" Set Var 30 to #$1E",
+"4322":" Var_10 = #$FF",
+"4377":" Hide Sprite 1A",
 "4491":" X = 3",
 "4495":" Y = X - 1",
 "4499":" A = $57[X] - $57[Y]",
@@ -4410,14 +4464,16 @@
 "Text":"F_HudScoreOnes\r\nF_HudScoreTens\r\nF_HudScoreHundos\r\nF_HudScoreThous\r\n\r\nAdds A to the current player X\u0027s score.\r\nEntry points exist for tens, hundreds and thousands as well and all follow the same calling convention.\r\n\r\n- Arguments \r\nA : A * n points to add to the score (where n is the current numeric place)\r\nX : Either 0 or 1, the current player score to update.",
 "BoxMode":true,
 "MaxWidth":80,
+"BackgroundColor":0},
+
+"4326":{
+"Text":"--  Reset Game Variables --\r\n",
+"BoxMode":false,
+"MaxWidth":80,
 "BackgroundColor":0}},
 
 "Notes":{
-"4169":{
-"Text":"Left off here",
-"BoxMode":false,
-"MaxWidth":80,
-"BackgroundColor":-23296}},
+},
 
 "UserLabels":{
 "8079":{
@@ -4953,7 +5009,7 @@
 "LabelAnno":"None"},
 
 "7040":{
-"Label":"F_DB80",
+"Label":"F_SetVar_30",
 "Value":56192,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -5499,7 +5555,7 @@
 "LabelAnno":"None"},
 
 "4169":{
-"Label":"F_D049",
+"Label":"F_NextTrack",
 "Value":53321,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -5555,7 +5611,7 @@
 "LabelAnno":"None"},
 
 "5354":{
-"Label":"F_InitTrack_D4EA",
+"Label":"F_HideTrackSprites",
 "Value":54506,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -6551,6 +6607,34 @@
 "14167":{
 "Label":"nextCar",
 "Value":63319,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"13934":{
+"Label":"F_Set_Spr00_ObjBase",
+"Value":63086,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13938":{
+"Label":"writeSpr00",
+"Value":63090,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"13887":{
+"Label":"F_F63F",
+"Value":63039,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13948":{
+"Label":"return",
+"Value":63100,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},

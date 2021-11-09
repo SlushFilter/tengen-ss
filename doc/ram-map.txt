@@ -11,10 +11,13 @@
 
 0A								
 0B			FrameCounter		Incremented by one every NMI
+0C								???
 0D			InitTrackFlag		Flags : A... ....
 									A : Initialize TrackFlag Latch
 
 0E								Something to do with AI car handling ?
+
+10								Init to #$FF
 
 12			GamePaused			Pause the game, only read Start button inputs 
 								if non-zero
@@ -91,6 +94,7 @@
 									x: Index into $E219, this portion of the
 									   angle is used to figure out how to draw
 									   the car.
+80								Indexer of some sort ?
 81:84		Car_SubDir			Fractional angle of the direction of travel.
 85:88		Car_Traction		Traction Upgrade Tier
 89:8C		Car_Accel			Acceleration Upgrade Tier
@@ -120,7 +124,7 @@ BE:C1							Array of some sort .. blockmap?
 C2:C5							Array of some sort .. blockmap
 C6:C9		CollisionInfo		BlockMap data of the car's rough position.
 
-CE								#$00
+CE			Spr00_ObjBase		Spr00_Tile index * 4 _ Could be a object type?
 
 ### Stack ###
 100:1FF							System Stack
