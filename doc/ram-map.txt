@@ -117,9 +117,9 @@ AA			Spr_04_Attr			OAM Attribute for Sprite 04
 AB			Spr_1B_Attr			OAM Attribute for Sprite 1B
 AC								Init #$10
 B1								Data from the F6DF array
-B2:B5							Array of some sort.. i think
-B6:B9							Array of some sort.. i think
-BA:BD							Array of some sort.. i think
+B2:B5		CheckPoint			Current Checkpoint on this Lap
+B6:B9		LapCounter			Lap Counter for Each Car
+BA:BD		CheckPointTotal		Total number of Checkpoints crossed.
 BE:C1							Array of some sort .. blockmap?
 C2:C5							Array of some sort .. blockmap
 C6:C9		CollisionInfo		BlockMap data of the car's rough position.
@@ -211,7 +211,7 @@ Super Sprint uses static sprites to draw everything
 33C			CurrentTrack		The current track the racers are on.
 
 33D								??
-33E                             Init to #$03
+33E                             Leader CheckPointTotal ?
 
 33F								Shadow_A
 340								Shadow_X
