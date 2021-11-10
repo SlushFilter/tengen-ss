@@ -55,6 +55,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Car_BE":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Car_BE",
+"Value":190,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Car_C2":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Car_C2",
+"Value":194,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Car_Collision":{
 "DataDescriptor":{
 "Length":4,
@@ -408,6 +442,23 @@
 "MultiMask":null,
 "Label":"Difficulty",
 "Value":793,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Flags_9D":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Flags_9D",
+"Value":157,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3234,23 +3285,6 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
-"Var_9D":{
-"DataDescriptor":{
-"Length":4,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":true,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_9D",
-"Value":157,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
 "Var_AC":{
 "DataDescriptor":{
 "Length":1,
@@ -3859,8 +3893,9 @@
 "9675":" Level 6",
 "10354":" $91[X] = $91[X] \u0026 %11100111",
 "10358":" Branch if any bits are set of %01100010",
-"10584":" Fetch Data Pointer (word)Var_01 ",
+"10582":" Fetch Pointer to Data Array",
 "10594":" Y = $1B \u003c\u003c 2",
+"10701":" Set Sprite in front of BG",
 "10786":" Reset Lap Checkpoint to 0",
 "10788":" Increment Total Checkpoints",
 "10790":" Increment Current Lap",
@@ -3886,6 +3921,13 @@
 "12011":" Set Sprite_00 (200:20F) tile id to #$F0",
 "13411":" A = $4C[X] \u0026 %00000111",
 "13415":" If A \u003c #$04 then Var_1C = #$10",
+"13438":" $88A5",
+"13439":" $91C1",
+"13440":" $9B53",
+"13441":" $A4AF",
+"13442":" $ADF3",
+"13443":" $B73E",
+"13444":" $BFFB",
 "13712":" Set (word)Var_01 = Attribute Data Pointer Y",
 "13727":" Set PPUADDR to AttribTable X",
 "13738":" Copy #$40 bytes to Attribute Table X",
@@ -4511,6 +4553,30 @@
 
 "10809":{
 "Text":"-- End Race if Someone Entered 5th Lap --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10694":{
+"Text":"-- Set Sprite Behind BG --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10701":{
+"Text":"-- Set Sprite in front of BG --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10594":{
+"Text":"-- Calculate Index into Data Array --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10601":{
+"Text":"-- First Check --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0}},
@@ -5185,11 +5251,11 @@
 "LabelAnno":"None"},
 
 "10708":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Value":59860,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "13409":{
 "Label":"F_F461",
@@ -6715,6 +6781,27 @@
 "Value":59957,
 "Source":"User",
 "Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10701":{
+"Label":"setSpriteFront",
+"Value":59853,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"13424":{
+"Label":"D_F470",
+"Value":62576,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13431":{
+"Label":"D_F477",
+"Value":62583,
+"Source":"User",
+"Type":"GlobalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
@@ -13877,7 +13964,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13632":{
@@ -13885,7 +13972,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13634":{
@@ -13893,7 +13980,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13636":{
@@ -13901,7 +13988,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13638":{
@@ -13909,7 +13996,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13640":{
@@ -13917,7 +14004,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13642":{
@@ -13925,7 +14012,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13644":{
@@ -13933,7 +14020,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13646":{
@@ -13941,7 +14028,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13648":{
@@ -13949,7 +14036,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13650":{
@@ -13957,7 +14044,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13652":{
@@ -13965,7 +14052,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13654":{
@@ -13973,7 +14060,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13656":{
@@ -13981,7 +14068,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE9D4",
+"Label":"F_CountCheckpoint",
 "Part":"Low"}},
 
 "13658":{
