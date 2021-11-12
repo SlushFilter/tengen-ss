@@ -18,7 +18,7 @@
 0E								Something to do with AI car handling ?
 
 10								Init to #$FF
-
+11			PauseFlag			Pause During a race.
 12			GamePaused			Pause the game, only read Start button inputs 
 								if non-zero
 13								CHR Table Index to be loaded into VRAM $0000
@@ -33,6 +33,7 @@
 1E								Init to #$00
 1F								Init to #$30
 
+26								Something to do with lap flags ? Code interested in x... ...x
 27								General use ?
 28                              General use ?
 29                              General use ?
@@ -123,7 +124,7 @@ BA:BD		CheckPointTotal		Total number of Checkpoints crossed.
 BE:C1							Array of some sort .. blockmap?
 C2:C5							Array of some sort .. blockmap
 C6:C9		CollisionInfo		BlockMap data of the car's rough position.
-
+CA:CD							??? 
 CE			Spr00_ObjBase		Spr00_Tile index * 4 _ Could be a object type?
 
 ### Stack ###
@@ -200,7 +201,9 @@ Super Sprint uses static sprites to draw everything
 32D								Flags : AB.. ....
 									A : ???
 									B : ???
-									
+32E			PauseState			Game state pause latches : E... ...P
+									E : (0) No state change (1) Changing state between pause/unpaused
+									P : (0) Unpaused State (1) Paused State
 330			Var_330				Randomized value between 0:3
 
 331:333		Var_331				Array related to PpuAddr buffers
@@ -218,6 +221,7 @@ Super Sprint uses static sprites to draw everything
 341								Shadow_Y
 
 342:343		CarSFX				Current Sound effect ## the car is playing.
+345								???
 
 35C								Index into $E219
 35E								Init to #03

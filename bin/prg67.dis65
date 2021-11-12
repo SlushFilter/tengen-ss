@@ -21,6 +21,23 @@
 "PlatformSymbolFileIdentifiers":["RT:Nintendo/NES.sym65"],
 "ExtensionScriptFileIdentifiers":[],
 "ProjectSyms":{
+"Backup_X":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Backup_X",
+"Value":837,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "BootConst":{
 "DataDescriptor":{
 "Length":3,
@@ -85,6 +102,23 @@
 "MultiMask":null,
 "Label":"Car_C2",
 "Value":194,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Car_CA":{
+"DataDescriptor":{
+"Length":4,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":true,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Car_CA",
+"Value":202,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -493,6 +527,40 @@
 "MultiMask":null,
 "Label":"GamePaused",
 "Value":18,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"HudLaps_P1":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"HudLaps_P1",
+"Value":777,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"HudLaps_P2":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"HudLaps_P2",
+"Value":787,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -1789,6 +1857,40 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"PauseState":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"PauseState",
+"Value":814,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"PauseTrigger":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"PauseTrigger",
+"Value":17,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "PpuAddr_Hi":{
 "DataDescriptor":{
 "Length":3,
@@ -2316,6 +2418,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"SpriteBackup":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"SpriteBackup",
+"Value":840,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "V_QueueSFX":{
 "DataDescriptor":{
 "Length":1,
@@ -2605,6 +2724,23 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
+"Var_1A":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_1A",
+"Value":26,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
 "Var_1B":{
 "DataDescriptor":{
 "Length":1,
@@ -2686,6 +2822,23 @@
 "MultiMask":null,
 "Label":"Var_1F",
 "Value":31,
+"Source":"Project",
+"Type":"ExternalAddr",
+"LabelAnno":"None"},
+
+"Var_26":{
+"DataDescriptor":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Hex",
+"SymbolRef":null},
+
+"Comment":"",
+"HasWidth":false,
+"Direction":"ReadWrite",
+"MultiMask":null,
+"Label":"Var_26",
+"Value":38,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -2809,23 +2962,6 @@
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
 
-"Var_309":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_309",
-"Value":777,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
 "Var_30A":{
 "DataDescriptor":{
 "Length":8,
@@ -2839,23 +2975,6 @@
 "MultiMask":null,
 "Label":"Var_30A",
 "Value":778,
-"Source":"Project",
-"Type":"ExternalAddr",
-"LabelAnno":"None"},
-
-"Var_313":{
-"DataDescriptor":{
-"Length":1,
-"Format":"NumericLE",
-"SubFormat":"Hex",
-"SymbolRef":null},
-
-"Comment":"",
-"HasWidth":false,
-"Direction":"ReadWrite",
-"MultiMask":null,
-"Label":"Var_313",
-"Value":787,
 "Source":"Project",
 "Type":"ExternalAddr",
 "LabelAnno":"None"},
@@ -3627,6 +3746,9 @@
 "3827":" ScreenIndex = A",
 "3829":" Clear targeted nametable.",
 "3847":" Tail Return",
+"4092":" Backup OamSpr00_Y values",
+"4098":" Copy Data to OamSpr00_Y",
+"4107":" Mute Audio",
 "4169":" CurrentTrack++",
 "4177":" Wrap to 0 if CurrentTrack \u003e 6",
 "4186":" Set $35E to #$03",
@@ -3891,8 +4013,39 @@
 "9671":" Level 4",
 "9673":" Level 5",
 "9675":" Level 6",
+"10267":" Var_02 = #$00",
+"10274":" A = Car_Y[X] - #$18",
+"10280":" Var_02 = Top Two Bits of A, ROL into bottom 2 bits",
+"10282":" Var_01 = Remainder of A \u0026 #$E0",
+"10284":" (word)Var_01 = .... ..YY YYY. ....",
+"10289":" A = Car_X[X] \u003e\u003e 3",
+"10296":" (word)Var_01 = .... ..YY YYYX XXXX",
 "10354":" $91[X] = $91[X] \u0026 %11100111",
 "10358":" Branch if any bits are set of %01100010",
+"10391":" $1D = Angle 90 dgrees to $1C",
+"10398":" A = Car_Dir - $1D",
+"10403":" Negate A",
+"10406":" A = A + $1D",
+"10412":" Branch if $1D == $1C",
+"10420":" Branch if $1D == Car_Dir",
+"10425":" A = (Absolute Value)$1D - $1C",
+"10436":" Branch if result was within 6",
+"10457":" Car_Dir = $1C",
+"10462":" $1D = CarFacing",
+"10465":" Car_Facing = $1C",
+"10467":" Car_Vel = Car_Vel / 2",
+"10471":" Car_CA = #$06",
+"10477":" Car_Flags.bit5 = set",
+"10493":" Play SFX 16",
+"10498":" Branch if CPU controlled",
+"10503":" Play Player SFX",
+"10510":" If Car_Vel \u003c 5",
+"10512":" Set Car_Vel = 5",
+"10524":" Car_Dir = Opposite angle of Car_Dir",
+"10528":" $1D = CarFacing",
+"10532":" Car_Vel = #$05",
+"10536":" Car_CA = #$0A",
+"10542":" CarFlags.bit1 = set",
 "10582":" Fetch Pointer to Data Array",
 "10594":" Y = $1B \u003c\u003c 2",
 "10701":" Set Sprite in front of BG",
@@ -3919,8 +4072,27 @@
 "11220":" $CE = #$00",
 "11229":" Flag to disable drawing of Sprite 00",
 "12011":" Set Sprite_00 (200:20F) tile id to #$F0",
+"12901":" Branch if Car_X % 7 \u003e= 4",
+"12909":" Branch if Car_Y % 7 \u003e= 4",
+"12935":" Check Car_X % 7 \u003c 4",
+"12941":" Return if Car_X % 7 \u003c 4",
+"12949":" Return if Car_Y % 7 \u003e= 4",
+"12961":" Return if Car_X % 7 \u003c 4",
+"12969":" Return if Car_Y % 7 \u003c 4",
+"12984":" Branch if Car_Y % 7 \u003c 4",
+"12986":" else return.",
+"13276":" (word)Var_01 += #$20",
+"13292":" (word)Var_01 -= #$20",
+"13298":" $1B = Byte fetched from (Ptr)Var_01[Y]",
 "13411":" A = $4C[X] \u0026 %00000111",
 "13415":" If A \u003c #$04 then Var_1C = #$10",
+"13424":" $85A5",
+"13425":" $8EC1",
+"13426":" $9853",
+"13427":" $A1AF",
+"13428":" $AAF3",
+"13429":" $B43E",
+"13430":" $BCFB",
 "13438":" $88A5",
 "13439":" $91C1",
 "13440":" $9B53",
@@ -3928,6 +4100,10 @@
 "13442":" $ADF3",
 "13443":" $B73E",
 "13444":" $BFFB",
+"13502":" 00",
+"13534":" 10",
+"13566":" 20",
+"13586":" 29",
 "13712":" Set (word)Var_01 = Attribute Data Pointer Y",
 "13727":" Set PPUADDR to AttribTable X",
 "13738":" Copy #$40 bytes to Attribute Table X",
@@ -4396,7 +4572,7 @@
 "BackgroundColor":0},
 
 "8545":{
-"Text":"-- Blockmap Pointers for Track Collision --",
+"Text":"-- Vector Map Pointers for AI Steering --",
 "BoxMode":false,
 "MaxWidth":80,
 "BackgroundColor":0},
@@ -4579,10 +4755,86 @@
 "Text":"-- First Check --",
 "BoxMode":false,
 "MaxWidth":80,
+"BackgroundColor":0},
+
+"13265":{
+"Text":"F_Add20_Ptr_01\r\n\r\nAdds #$20 to the word at $01, then uses that address to fetch a byte.\r\nProgram execution then continues at F_CountCheckPoint\r\n\r\nReturns:\r\n\r\n$1B - The data byte at ($01),0",
+"BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"13281":{
+"Text":"F_Sub20_Ptr_01\r\n\r\nSubtracts #$20 to the word at $01, then uses that address to fetch a byte.\r\nProgram execution then continues at F_CountCheckPoint\r\n\r\nReturns:\r\n\r\n$1B - The data byte at ($01),0",
+"BoxMode":true,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"8559":{
+"Text":"-- LoRom Pointers for Some Purpose --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10271":{
+"Text":"-- Calculate Var_01 Offset Based on Car Position --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10298":{
+"Text":"-- Add base pointer from current screen --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"10315":{
+"Text":"-- Read in Data --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"13424":{
+"Text":"-- Pointers to Track Blockmap Data --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4040":{
+"Text":"-- Restore Sprite Data --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4052":{
+"Text":"-- Wait for 65,536 loops --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4067":{
+"Text":"-- Queue SFX 05 --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4076":{
+"Text":"-- Queue SFX 0A --",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":0},
+
+"4089":{
+"Text":"-- Backup and Re-write Spr00 values --",
+"BoxMode":false,
+"MaxWidth":80,
 "BackgroundColor":0}},
 
 "Notes":{
-},
+"4017":{
+"Text":"Understand Me!",
+"BoxMode":false,
+"MaxWidth":80,
+"BackgroundColor":-18751}},
 
 "UserLabels":{
 "8079":{
@@ -5279,11 +5531,11 @@
 "LabelAnno":"Generated"},
 
 "13364":{
-"Label":"TF434",
+"Label":"F_F434",
 "Value":62516,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "13338":{
 "Label":"TF41A",
@@ -5300,11 +5552,11 @@
 "LabelAnno":"Generated"},
 
 "10350":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Value":59502,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "13023":{
 "Label":"TF2DF",
@@ -5328,11 +5580,11 @@
 "LabelAnno":"Generated"},
 
 "12975":{
-"Label":"TF2AF",
+"Label":"F_NextCheckpoint_F2AF",
 "Value":62127,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "13237":{
 "Label":"TF3B5",
@@ -5454,18 +5706,18 @@
 "LabelAnno":"Generated"},
 
 "12978":{
-"Label":"TF2B2",
+"Label":"F_BottomRet",
 "Value":62130,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "12955":{
-"Label":"TF29B",
+"Label":"F_TopLeftRet",
 "Value":62107,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "12915":{
 "Label":"TF273",
@@ -5475,18 +5727,18 @@
 "LabelAnno":"Generated"},
 
 "12895":{
-"Label":"TF25F",
+"Label":"F_RetBotRight",
 "Value":62047,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "12935":{
-"Label":"TF287",
+"Label":"F_BotLeftRet",
 "Value":62087,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "10349":{
 "Label":"_Return_E86D",
@@ -5790,11 +6042,11 @@
 "LabelAnno":"None"},
 
 "105":{
-"Label":"TC069",
+"Label":"D_C069",
 "Value":49257,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "5413":{
 "Label":"F_RandomizePuddle",
@@ -5818,11 +6070,11 @@
 "LabelAnno":"None"},
 
 "79":{
-"Label":"TC04F",
+"Label":"D_C04F",
 "Value":49231,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "5399":{
 "Label":"D_RoadConeDataPtr_Lo",
@@ -5860,11 +6112,11 @@
 "LabelAnno":"None"},
 
 "125":{
-"Label":"TC07D",
+"Label":"D_C07D",
 "Value":49277,
 "Source":"User",
 "Type":"GlobalAddr",
-"LabelAnno":"Generated"},
+"LabelAnno":"None"},
 
 "4892":{
 "Label":"loop",
@@ -5972,14 +6224,14 @@
 "LabelAnno":"None"},
 
 "8545":{
-"Label":"D_BlockmapPtr_Lo",
+"Label":"D_VectormapPtr_Lo",
 "Value":57697,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"},
 
 "8552":{
-"Label":"D_BlockmapPtr_Hi",
+"Label":"D_VectormapPtr_Hi",
 "Value":57704,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -6581,14 +6833,14 @@
 "LabelAnno":"None"},
 
 "12811":{
-"Label":"F_F20B",
+"Label":"F_SetHudLaps",
 "Value":61963,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"},
 
 "12828":{
-"Label":"F_F21C",
+"Label":"F_AddScore3000",
 "Value":61980,
 "Source":"User",
 "Type":"GlobalAddr",
@@ -6791,17 +7043,248 @@
 "LabelAnno":"None"},
 
 "13424":{
-"Label":"D_F470",
+"Label":"D_BlockmapPtr_Lo",
 "Value":62576,
 "Source":"User",
 "Type":"GlobalAddr",
 "LabelAnno":"None"},
 
 "13431":{
-"Label":"D_F477",
+"Label":"D_BlockmapPtr_Hi",
 "Value":62583,
 "Source":"User",
 "Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13502":{
+"Label":"RTS_FunctionPointers",
+"Value":62654,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"12954":{
+"Label":"return",
+"Value":62106,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"12974":{
+"Label":"return",
+"Value":62126,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"12987":{
+"Label":"V_E86E",
+"Value":62139,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13265":{
+"Label":"F_Add20_Ptr_01",
+"Value":62417,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"13294":{
+"Label":"fetchByte",
+"Value":62446,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"13281":{
+"Label":"F_Sub20_Ptr_01",
+"Value":62433,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"12914":{
+"Label":"return",
+"Value":62066,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10371":{
+"Label":"skipNegate",
+"Value":59523,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10450":{
+"Label":"V_E8D2",
+"Value":59602,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"10434":{
+"Label":"skipNegate",
+"Value":59586,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10479":{
+"Label":"F_E8EF",
+"Value":59631,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"10515":{
+"Label":"D_PlayerSfx",
+"Value":59667,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"10506":{
+"Label":"playerSkip",
+"Value":59658,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"10514":{
+"Label":"return",
+"Value":59666,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4971":{
+"Label":"onLap4",
+"Value":54123,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"5010":{
+"Label":"return",
+"Value":54162,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"8559":{
+"Label":"D_PtrE16F_Lo",
+"Value":57711,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"8566":{
+"Label":"D_PtrE16F_Hi",
+"Value":57718,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"55":{
+"Label":"D_C037",
+"Value":49207,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"10319":{
+"Label":"_writeFuncIdx",
+"Value":59471,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4017":{
+"Label":"F_PauseHandler",
+"Value":53169,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"3900":{
+"Label":"pauseLoop",
+"Value":53052,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4028":{
+"Label":"notPaused",
+"Value":53180,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4112":{
+"Label":"pauseRequest",
+"Value":53264,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4040":{
+"Label":"restoreSprites",
+"Value":53192,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4052":{
+"Label":"waitLoop",
+"Value":53204,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4141":{
+"Label":"return",
+"Value":53293,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4142":{
+"Label":"D_PauseSpriteData",
+"Value":53294,
+"Source":"User",
+"Type":"GlobalAddr",
+"LabelAnno":"None"},
+
+"4089":{
+"Label":"backupSprites",
+"Value":53241,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4084":{
+"Label":"showPauseMarquee",
+"Value":53236,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4072":{
+"Label":"carflagsBit7",
+"Value":53224,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
+"LabelAnno":"None"},
+
+"4110":{
+"Label":"skipCopySprData",
+"Value":53262,
+"Source":"User",
+"Type":"NonUniqueLocalAddr",
 "LabelAnno":"None"}},
 
 "OperandFormats":{
@@ -8155,12 +8638,42 @@
 "SubFormat":"None",
 "SymbolRef":null},
 
+"4142":{
+"Length":4,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"4146":{
+"Length":4,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"4150":{
+"Length":4,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"4154":{
+"Length":4,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"4158":{
+"Length":4,
+"Format":"Dense",
+"SubFormat":"None",
+"SymbolRef":null},
+
 "4941":{
 "Length":1,
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC07D",
+"Label":"D_C07D",
 "Part":"Low"}},
 
 "4948":{
@@ -8168,7 +8681,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC07D",
+"Label":"D_C07D",
 "Part":"High"}},
 
 "5391":{
@@ -8176,7 +8689,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC069",
+"Label":"D_C069",
 "Part":"Low"}},
 
 "5398":{
@@ -8184,7 +8697,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC069",
+"Label":"D_C069",
 "Part":"High"}},
 
 "5405":{
@@ -8192,7 +8705,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC04F",
+"Label":"D_C04F",
 "Part":"Low"}},
 
 "5412":{
@@ -8200,7 +8713,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TC04F",
+"Label":"D_C04F",
 "Part":"High"}},
 
 "8534":{
@@ -8269,6 +8782,14 @@
 "SubFormat":"None",
 "SymbolRef":null},
 
+"8565":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"D_C037",
+"Part":"Low"}},
+
 "8569":{
 "Length":1,
 "Format":"NumericLE",
@@ -8290,8 +8811,10 @@
 "8572":{
 "Length":1,
 "Format":"NumericLE",
-"SubFormat":"None",
-"SymbolRef":null},
+"SubFormat":"Symbol",
+"SymbolRef":{
+"Label":"D_C037",
+"Part":"High"}},
 
 "8580":{
 "Length":1,
@@ -13335,6 +13858,348 @@
 "SubFormat":"Binary",
 "SymbolRef":null},
 
+"12026":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12027":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12028":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12029":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12030":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12031":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12032":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12033":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12034":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12035":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12036":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12037":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12038":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12039":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12040":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12041":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12042":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12043":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12044":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12045":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12046":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12047":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12048":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12049":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12050":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12051":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12052":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12053":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12054":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12055":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12056":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12057":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12058":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12059":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12060":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12061":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12066":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12067":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12068":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12069":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12070":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12071":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12072":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12073":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12074":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12075":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12076":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12077":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12078":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12079":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12080":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12081":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12082":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12083":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12084":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12085":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
+"12086":{
+"Length":1,
+"Format":"NumericLE",
+"SubFormat":"None",
+"SymbolRef":null},
+
 "12735":{
 "Length":1,
 "Format":"NumericLE",
@@ -13460,7 +14325,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF287",
+"Label":"F_BotLeftRet",
 "Part":"Low"}},
 
 "13506":{
@@ -13468,7 +14333,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF25F",
+"Label":"F_RetBotRight",
 "Part":"Low"}},
 
 "13508":{
@@ -13484,7 +14349,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF29B",
+"Label":"F_TopLeftRet",
 "Part":"Low"}},
 
 "13512":{
@@ -13492,7 +14357,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF2B2",
+"Label":"F_BottomRet",
 "Part":"Low"}},
 
 "13514":{
@@ -13676,7 +14541,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF2AF",
+"Label":"F_NextCheckpoint_F2AF",
 "Part":"Low"}},
 
 "13560":{
@@ -13708,7 +14573,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13568":{
@@ -13716,7 +14581,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13570":{
@@ -13724,7 +14589,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13572":{
@@ -13732,7 +14597,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13574":{
@@ -13740,7 +14605,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13576":{
@@ -13748,7 +14613,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13578":{
@@ -13756,7 +14621,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13580":{
@@ -13764,7 +14629,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TE86E",
+"Label":"F_E86E",
 "Part":"Low"}},
 
 "13582":{
@@ -13788,7 +14653,7 @@
 "Format":"NumericLE",
 "SubFormat":"Symbol",
 "SymbolRef":{
-"Label":"TF434",
+"Label":"F_F434",
 "Part":"Low"}},
 
 "13588":{
